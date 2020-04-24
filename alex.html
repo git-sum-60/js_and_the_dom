@@ -15,6 +15,8 @@
   <p>Y coordinate</p>
   <p id="y-coordinate"></p>
 
+  <div id="products"></div>
+
   <script>
     function doSomething() {
       console.log('doing something...')
@@ -43,6 +45,25 @@
       // change the innerText or innerHTML
       
     }
+
+    var products = [
+      {id: 1, name: "Lightsaver", price: 100},
+      {id: 2, name: 'iphone', price: 399},
+      {id: 3, name: "glasses", price: 20}
+    ]
+
+    var productsHTML = "";
+
+    products.forEach(function(product) {
+      productsHTML += "<div><h2>" + product.name + "</h2><p>" + product.price + "</p></div>"
+    })
+
+    console.log(productsHTML);
+
+    var productsDiv = document.querySelector('#products')
+    productsDiv.innerHTML = productsHTML;
+
+
   </script>
   
 </body>
