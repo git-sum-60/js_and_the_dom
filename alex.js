@@ -33,7 +33,8 @@ var products = [
 ]
 
 
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function() {
   var productsHTML = "";
   
   products.forEach(function(product) {
@@ -42,7 +43,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   console.log(productsHTML);
   
-  var productsDiv = document.querySelector('#products')
-  productsDiv.innerHTML = productsHTML;
+  // var productsDiv = document.querySelector('#products')
+  var productsDiv = $('#products')
+  // productsDiv.innerHTML = productsHTML;
+  productsDiv.html(productsHTML);
+
+
+  $("#description").on('click', function() {
+    console.log('i am running a function')
+  })
 
 }) 
